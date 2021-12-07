@@ -1,0 +1,141 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2e3136;
+    min-height: 100vh;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--c-d-gray);
+    border-radius: 5px;
+    position: relative;
+}
+
+button {
+    background-color: #7289da;
+    border-radius: 5px;
+    font-family: inherit;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    transition: box-shadow 0.1s, background-color 0.3s;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+button:disabled {
+    background-color: #2e3136;
+    cursor: default;
+}
+
+button:active {
+    box-shadow: inset 0 0 5px #1e2124;
+}
+
+.moves {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.flex-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+.flex-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.characters {
+    display: grid;
+    grid-template: repeat(2, 200px) / repeat(3, 200px);
+    grid-gap: 5px;
+    margin: 5px 0;
+    background-image: url(https://cdn.discordapp.com/attachments/900315139268571137/917496153640169482/1200px-Vy_logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--c-d-gray-light2);
+    background-size: 30%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.health-bar {
+    width: 100%;
+    background-color: var(--c-d-gray);
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, auto);
+}
+
+.health-bar p {
+    margin: 0;
+    text-align: center;
+}
+
+.health {
+    grid-column: span 2;
+    height: 30px;
+    width: 100%;
+    background-color: var(--c-d-gray-light2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.health div {
+    height: 100%;
+    background-color: var(--c-d-green);
+}
+
+.picture{
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+    background-color: var(--c-d-gray);
+}
+
+.attack-text {
+    background-color: var(--c-d-gray-light2);
+    border-radius: 3px;
+    padding: 2px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template: auto / repeat(2, 1fr);
+}
+
+.attack-text p {
+    height: 1em;
+    padding: 5px;
+    text-align: center;
+}
+
+.winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(25, 25, 25, 0.3);
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
